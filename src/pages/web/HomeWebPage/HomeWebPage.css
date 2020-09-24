@@ -1,0 +1,307 @@
+@import "../../../css/variables.css";
+
+/*Padre*/
+.homeWebPage-row {
+  background: var(--azul-oscuro);
+}
+
+.homeWebPage-col {
+  min-height: 87.4vh;
+}
+
+/*SECCION DE INTRODUCCION*/
+.introduccion-row {
+  margin-top: 100px;
+  margin-bottom: 200px;
+}
+
+.Introduccion-principal h1 {
+  color: var(--blanco);
+  font-family: var(--font-titulo);
+  font-size: 70px;
+  margin-bottom: 50px;
+}
+
+.Introduccion-principal p {
+  color: var(--blanco);
+  font-family: var(--font-cuerpo);
+  font-size: 20px;
+  line-height: 35px;
+  margin-bottom: 40px;
+}
+
+.Introduccion-principal button {
+  width: 100%;
+  border: transparent;
+  border-radius: 50px;
+  height: 50px;
+  font-size: 23px;
+  font-weight: bold;
+  font-family: var(--font-cuerpo);
+  background: var(--celeste);
+  transition: all 0.5s;
+}
+
+.Introduccion-principal button:hover {
+  transform: rotate(-2deg);
+}
+
+.Introduccion-principal button:focus {
+  outline: none;
+}
+
+.Introduccion-principal button a {
+  color: var(--blanco);
+}
+
+.Introduccion-secondary {
+  margin-top: 90px;
+  text-align: center;
+}
+
+.Introduccion-secondary img {
+  width: 100%;
+  max-width: 600px;
+}
+
+/*SECCION DE CARD*/
+.card-row {
+  margin-bottom: 150px;
+}
+
+.card-first-title h2 {
+  text-align: center;
+  font-family: var(--font-titulo);
+  color: var(--blanco);
+  font-size: var(--titulo-seccion-grande);
+  margin-bottom: 100px;
+  text-decoration: underline;
+  text-decoration-color: var(--celeste);
+  letter-spacing: 2px;
+}
+
+.card-col {
+  display: flex;
+  justify-content: center;
+  max-width: 18rem;
+}
+
+.card-container {
+  border: 1px solid var(--azul-oscuro) !important;
+  box-shadow: 0px 5px 20px -5px black;
+  transition: all 1s;
+}
+
+.card-container img {
+  height: 428.55px;
+}
+
+.card-title {
+  font-family: var(--font-titulo);
+  text-align: center;
+  font-size: 32px;
+  color: var(--blanco);
+}
+
+.card-text {
+  font-family: var(--font-cuerpo);
+  text-align: center;
+  margin: 0;
+  color: var(--blanco);
+}
+
+.card-finanzas {
+  background: #00284d;
+}
+
+.card-recordatorios {
+  background: #004280;
+}
+
+.card-listas {
+  background: #005cb3;
+}
+
+/*SECCION DE FUNCIONAMIENTO*/
+.funcionamiento-row {
+  margin-bottom: 250px;
+}
+
+.funcionamiento-col-title h2 {
+  text-align: center;
+  font-family: var(--font-titulo);
+  color: var(--blanco);
+  font-size: var(--titulo-seccion-grande);
+  margin-bottom: 100px;
+  text-decoration: underline;
+  text-decoration-color: var(--celeste);
+  letter-spacing: 2px;
+}
+
+.funcionamiento-col-base {
+  display: flex;
+  background: var(--blanco);
+  border-radius: 5px;
+  box-shadow: 0px 10px 10px -2px black;
+}
+
+.funcionamiento-col-base__img {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.funcionamiento-col-base__img img {
+  width: 100%;
+  max-width: 560px;
+  height: 24.6vw;
+}
+
+.funcionamiento-col-base__paragraph {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.funcionamiento-col-base__paragraph h3 {
+  font-family: var(--font-subtitulo);
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.funcionamiento-col-base__paragraph p {
+  font-family: var(--font-cuerpo);
+}
+
+/*LAST ROW*/
+.last-row {
+  margin-bottom: 250px;
+}
+
+.last-col {
+  text-align: center;
+}
+
+.last-col h2 {
+  color: #ffffff;
+  font-family: var(--font-titulo);
+  font-size: 70px;
+  margin-bottom: 50px;
+}
+
+.last-col button {
+  width: 100%;
+  border: transparent;
+  border-radius: 50px;
+  height: 50px;
+  font-size: 23px;
+  font-weight: bold;
+  font-family: var(--font-cuerpo);
+  background: var(--celeste);
+  transition: all 0.5s;
+}
+
+.last-col button:hover {
+  transform: rotate(2deg);
+}
+
+.last-col button:focus {
+  outline: none;
+}
+
+.last-col button a {
+  color: var(--blanco);
+}
+
+/*MEDIA QUERYS*/
+/*XS*/
+@media (max-width: 575.98px) {
+  /*SECCION DE INTRODUCCION*/
+  .Introduccion-principal h1 {
+    font-size: 60px;
+    margin-bottom: 40px;
+  }
+  .Introduccion-principal p {
+    font-size: 16px;
+    line-height: 30px;
+  }
+  /*FIN SECCION DE INTRODUCCION*/
+
+  /*SECCION DE CARD*/
+  .card-col {
+    margin-top: 30px;
+  }
+  /*FIN SECCION DE CARD*/
+
+  /*SECCION DE FUNCIONAMIENTO*/
+  /*FIN SECCION DE FUNCIONAMIENTO*/
+}
+
+/*SM*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /*SECCION DE INTRODUCCION*/
+  .Introduccion-principal h1 {
+    font-size: 60px;
+    margin-bottom: 40px;
+  }
+  .Introduccion-principal p {
+    font-size: 16px;
+    line-height: 30px;
+  }
+  /*FIN SECCION DE INTRODUCCION*/
+
+  /*SECCION DE CARD*/
+  .card-col {
+    margin-top: 30px;
+  }
+  /*FIN SECCION DE CARD*/
+
+  /*SECCION DE FUNCIONAMIENTO*/
+  /*FIN SECCION DE FUNCIONAMIENTO*/
+}
+
+/*MD*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /*SECCION DE INTRODUCCION*/
+  /*FIN SECCION DE INTRODUCCION*/
+
+  /*SECCION DE CARD*/
+  .card-col:last-child {
+    margin-top: 30px;
+  }
+  /*FIN SECCION DE CARD*/
+
+  /*SECCION DE FUNCIONAMIENTO*/
+  .funcionamiento-col-base__img img {
+    width: 100%;
+    height: 50%;
+  }
+  /*FIN SECCION DE FUNCIONAMIENTO*/
+}
+
+/*LG*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /*SECCION DE INTRODUCCION*/
+  .Introduccion-principal h1 {
+    font-size: 60px;
+    margin-bottom: 40px;
+  }
+  .Introduccion-principal p {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  /*FIN SECCION DE INTRODUCCION*/
+
+  /*SECCION DE CARD*/
+  /*FIN SECCION DE CARD*/
+
+  /*SECCION DE FUNCIONAMIENTO*/
+  .funcionamiento-col-base__img img {
+    width: 100%;
+    height: 70%;
+  }
+  /*FIN SECCION DE FUNCIONAMIENTO*/
+}

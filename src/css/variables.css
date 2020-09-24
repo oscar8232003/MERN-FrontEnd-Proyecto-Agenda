@@ -1,0 +1,24 @@
+:root {
+  /*FONTS*/
+  --font-titulo: "Londrina Solid", cursive;
+  --font-subtitulo: "Sarala", sans-serif;
+  --font-cuerpo: "Poppins", sans-serif;
+
+  /*COLORES*/
+  --azul-oscuro: #001529;
+  --azul-medio-oscuro: #00284d;
+  --azul: #004280;
+  --celeste-oscuro: #005cb3;
+  --celeste: #0077e6;
+  --grey: #e1e1e1;
+  --grey-oscuro: #ababab;
+  --blanco: #f5faff;
+  --rojo: #9a323e;
+
+  /*TAMAÑOS*/
+  --titulo-seccion-grande: 45px;
+
+  /*LOGO*/
+  --logo-width: 120px;
+  --logo-height: 51px;
+}

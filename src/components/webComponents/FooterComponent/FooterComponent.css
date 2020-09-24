@@ -1,0 +1,90 @@
+@import "../../../css/variables.css";
+
+.footer-row {
+  background: var(--azul-medio-oscuro);
+  padding-top: 10px;
+  padding-bottom: 0px;
+}
+
+.footer-col-social-networks {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-col-social-networks img {
+  width: 120px;
+  height: 51px;
+}
+
+.footer-col-social-networks h3 {
+  color: var(--blanco);
+  margin-top: 10px;
+  font-size: 22px;
+  letter-spacing: 2px;
+  font-family: var(--font-titulo);
+}
+
+.footer-col-social-networks__social-networks {
+  margin-top: 5px;
+}
+
+.footer-col-social-networks__social-networks span {
+  font-size: 25px;
+  margin-left: 25px;
+  transition: all 0.5s;
+}
+
+.footer-col-social-networks__social-networks .facebook {
+  color: #5676bd;
+}
+
+.footer-col-social-networks__social-networks .facebook:hover {
+  color: #2e66dd;
+}
+
+.footer-col-social-networks__social-networks .instagram {
+  color: #e1306c;
+}
+
+.footer-col-social-networks__social-networks .instagram:hover {
+  color: #fc3778;
+}
+
+.footer-col-social-networks__social-networks .whatsapp {
+  color: #4dc247;
+}
+
+.footer-col-social-networks__social-networks .whatsapp:hover {
+  color: #5ae752;
+}
+
+/*MEDIA QUERYS*/
+/*XS*/
+@media (max-width: 575.98px) {
+  .footer-col-social-networks {
+    padding-bottom: 10px;
+  }
+  .footer-col-social-networks h3 {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+/*SM*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .footer-col-social-networks {
+    padding-bottom: 10px;
+  }
+  .footer-col-social-networks h3 {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+/*MD*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .footer-col-social-networks h3 {
+    font-size: 18px;
+    text-align: center;
+  }
+}

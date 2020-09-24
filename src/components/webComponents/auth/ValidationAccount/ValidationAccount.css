@@ -1,0 +1,100 @@
+@import "../../../../css/variables.css";
+
+/*SENDVALIDATION.JS*/
+.container-component-validation {
+  margin: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-validation {
+  width: 100%;
+}
+
+.header-validation img {
+  width: 120px;
+  height: 51px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.container-component-validation h2 {
+  font-family: var(--font-titulo);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.container-component-validation p {
+  font-family: var(--font-cuerpo);
+  text-align: center;
+  font-size: 17px;
+  margin-bottom: 40px;
+}
+
+.container-component-validation button {
+  background: var(--azul);
+  width: 50%;
+  height: 50px;
+  border: transparent;
+  font-size: 18px;
+  border-radius: 50px;
+  font-family: var(--font-subtitulo);
+  box-shadow: 0px 1px 10px -7px var(--celeste-oscuro);
+  transition: all 0.5s;
+}
+.container-component-validation button a {
+  color: var(--blanco);
+}
+
+.container-component-validation button:focus,
+.form-validation input:focus {
+  outline: none;
+}
+
+.container-component-validation button:hover {
+  transform: scale(1.03);
+  background: var(--celeste-oscuro);
+  color: var(--blanco);
+}
+
+/*FIN SENDVALIDATION.JS*/
+
+/*RESENDVALIDATION.JS*/
+.form-validation {
+  width: 50%;
+  margin-bottom: 40px;
+}
+
+.form-validation input {
+  width: 100%;
+  border: transparent;
+  height: 30px;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  box-shadow: 0px 1px 5px -3px var(--azul-oscuro);
+}
+
+.form-validation button {
+  width: 100%;
+  height: 30px;
+  font-size: 16px;
+  color: var(--blanco);
+  background: var(--azul-oscuro);
+  border-radius: 5px;
+}
+
+.form-validation button:hover {
+  transform: scale(1.03);
+  background: var(--azul);
+  color: var(--blanco);
+}
+
+.error-validation {
+  color: red;
+  font-size: 15px !important;
+  text-align: start;
+  margin-top: 0px;
+  margin-bottom: 10px !important;
+}
+/*FIN RESENDVALIDATION.JS*/

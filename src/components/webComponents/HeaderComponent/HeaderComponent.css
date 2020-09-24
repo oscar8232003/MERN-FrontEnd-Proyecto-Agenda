@@ -1,0 +1,65 @@
+@import "../../../css/variables.css";
+
+.header-component-row {
+  background: var(--azul-oscuro);
+}
+
+.header-component-nav-img {
+  width: 120px;
+  height: 51px;
+  border-radius: 10px;
+}
+
+.header-component-nav-links a {
+  font-family: var(--font-titulo);
+  color: var(--blanco) !important;
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+.header-component-nav-botonera button {
+  border-radius: 2px;
+  margin-right: 10px;
+  border: none;
+  height: 30px;
+  width: 85px;
+  font-family: var(--font-titulo);
+  font-size: 18px;
+  transition: all 0.3s;
+}
+
+.header-component-nav-botonera button:focus {
+  outline: none;
+}
+
+.header-component-nav-botonera button:hover {
+  transform: scale(1.05);
+}
+
+.header-component-nav-botonera a:hover {
+  color: var(--blanco);
+}
+
+.header-component-nav-botonera--login {
+  background: var(--celeste);
+}
+
+.header-component-nav-botonera--login a {
+  color: var(--blanco);
+}
+
+.header-component-nav-botonera--register {
+  background: var(--celeste-oscuro);
+}
+
+.header-component-nav-botonera--register a {
+  color: var(--blanco);
+}
+
+.header-component-nav-botonera--leave {
+  background: var(--rojo);
+}
+
+.header-component-nav-botonera--leave a {
+  color: var(--blanco);
+}

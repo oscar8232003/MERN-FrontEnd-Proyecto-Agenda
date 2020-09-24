@@ -1,0 +1,16 @@
+@import "../../../../css/variables.css";
+
+.background-validation {
+  min-height: 100vh;
+  background: var(--azul-oscuro);
+}
+
+.row-validation {
+  height: 100vh;
+}
+
+.col-validation {
+  background: var(--blanco);
+  min-height: 30vh;
+  border-radius: 5px;
+}
