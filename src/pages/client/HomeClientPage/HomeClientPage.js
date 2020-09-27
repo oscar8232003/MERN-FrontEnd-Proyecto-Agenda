@@ -1,10 +1,16 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 
 const HomeClientPage = () => {
   return (
-    <div>
-      <h2>Panel del Cliente</h2>
-    </div>
+    <>
+      <Helmet>
+        <title>Inicio Cliente</title>
+      </Helmet>
+      <div>
+        <h2>Panel del Cliente</h2>
+      </div>
+    </>
   );
 };
 

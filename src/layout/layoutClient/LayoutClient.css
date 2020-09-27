@@ -1,0 +1,110 @@
+@import "../../css/variables.css";
+
+.layoutClient__container {
+  padding: 0 !important;
+}
+
+/*SIDEBAR*/
+.layoutClient__sideBar {
+  min-height: 100vh !important;
+  background: var(--azul-oscuro);
+  padding: 0 !important;
+}
+
+.layoutClient__sideBar__nav {
+  position: fixed;
+  margin-left: calc((16.6% - 170px) / 2);
+}
+
+.layoutClient__sideBar__nav a {
+  font-family: var(--font-cuerpo);
+  color: var(--blanco);
+  margin-bottom: 15px;
+}
+
+.layoutClient__sideBar__nav a:hover {
+  color: var(--celeste);
+}
+
+.layoutClient__sideBar__nav__logo {
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 40px;
+}
+
+.layoutClient__sideBar__nav__logo img {
+  width: calc(var(--logo-width) + 10px);
+  height: var(--logo-hieght);
+}
+/*FIN SIDEBAR*/
+
+.layoutClient__client {
+  padding: 0 !important;
+}
+
+/*NAVBAR*/
+.layoutClient__client__navbar {
+  background: var(--blanco);
+  padding: 16px !important;
+}
+
+.layoutClient__client__navbar__brand {
+  font-family: var(--font-cuerpo);
+}
+
+.layoutClient__client__navbar__brand p {
+  margin: 0;
+  font-size: 17px;
+}
+
+.layoutClient__client__navbar__brand img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+
+.layoutClient__client__navbar__nav0 a,
+.layoutClient__client__navbar__nav3 a {
+  color: var(--azul-oscuro) !important;
+  font-family: var(--font-cuerpo);
+}
+
+.layoutClient__client__navbar__nav1 img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+
+.layoutClient__client__navbar--button {
+  background: var(--rojo);
+  border: transparent;
+  width: calc(100% - 48px);
+  color: var(--blanco);
+  font-family: var(--font-titulo);
+  font-size: 16px;
+  margin-left: 24px;
+}
+
+.layoutClient__client__navbar--button:focus {
+  outline: none;
+}
+
+.layoutClient__client__navbar__nav3 button {
+  margin: 0;
+  width: 20%;
+  margin-top: 10px;
+}
+
+.dropdown-toggle {
+  padding-top: 3px !important;
+  padding-bottom: 0px !important;
+}
+
+#collasible-nav-dropdown {
+  color: var(--azul-oscuro);
+  font-family: var(--font-cuerpo);
+}
+
+/*FIN NAVBAR*/

@@ -58,6 +58,7 @@
 
 .header-component-nav-botonera--leave {
   background: var(--rojo);
+  color: var(--blanco);
 }
 
 .header-component-nav-botonera--leave a {

@@ -60,3 +60,11 @@ export const Lista = () => {
 export const DedoIzquierda = () => {
   return <Emoji symbol="👈" label="dedoIzquierda" />;
 };
+
+export const Cambios = () => {
+  return <Emoji symbol="📝" label="Cambios" />;
+};
+
+export const Familia = () => {
+  return <Emoji symbol="👪" label="Familia" />;
+};

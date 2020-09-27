@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 //CSS
 import "./ErrorPage.css";
@@ -11,6 +12,9 @@ import { Miedo } from "../../../components/Emojis";
 const ErrorPage = () => {
   return (
     <Container fluid className="background-error">
+      <Helmet>
+        <title>Error 404</title>
+      </Helmet>
       <Row className="row-error">
         <Col xs="10" sm="9" md="8" lg="7" xl="6">
           <div className="container-error">

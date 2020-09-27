@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch } from "react-router-dom";
+import AuthProvider from "./Provider/AuthProvider";
 
 //Estilos
 import "./App.css";
@@ -12,13 +13,15 @@ import RuteoDinamico from "./helpers/RuteoDinamico.js";
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        {Routes.map((route, index) => (
-          <RuteoDinamico {...route} key={index} />
-        ))}
-      </Switch>
-    </Router>
+    <AuthProvider>
+      <Router>
+        <Switch>
+          {Routes.map((route, index) => (
+            <RuteoDinamico {...route} key={index} />
+          ))}
+        </Switch>
+      </Router>
+    </AuthProvider>
   );
 }
 

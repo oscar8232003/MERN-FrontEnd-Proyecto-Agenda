@@ -1,8 +1,13 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Row, Col, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import UseAuthHook from "../../../Hooks/UseAuthHook";
+import { Helmet } from "react-helmet";
 import AOS from "aos";
 import "aos/dist/aos.css";
+
+//SPINNER
+import Spin from "../../../components/Spin";
 
 //CSS
 import "./HomeWebPage.css";
@@ -29,12 +34,21 @@ import {
 } from "../../../components/Emojis";
 
 const HomeWebPage = () => {
+  const { user, isLoading } = UseAuthHook();
+
+  if (isLoading) {
+    return <Spin />;
+  }
+
   AOS.init({
     duration: 1000,
   });
 
   return (
     <>
+      <Helmet>
+        <title>Inicio</title>
+      </Helmet>
       <Row className="justify-content-center homeWebPage-row">
         <Col xs={12} sm={10} xl={9} className="homeWebPage-col">
           {/*SECCION DE INTRODUCCION*/}
@@ -48,9 +62,15 @@ const HomeWebPage = () => {
                 lugar, que esperas para probarla, es totalmente gratis!{" "}
                 <DineroConAlas />
               </p>
-              <button>
-                <Link to="/register">Empezar ahora</Link>
-              </button>
+              {user ? (
+                <button>
+                  <Link to="/client">Ir a mi agenda!</Link>
+                </button>
+              ) : (
+                <button>
+                  <Link to="/register">Empezar ahora</Link>
+                </button>
+              )}
             </Col>
             <Col
               className="Introduccion-secondary"
@@ -187,19 +207,32 @@ const HomeWebPage = () => {
                 <h3>
                   Simple y Facil <Guiño />
                 </h3>
-                <p>
-                  <strong>1°-</strong> Primero que todo necesitas tu cuenta,
-                  puedes ir <Link to="/register">Aquí para registrarte</Link>{" "}
-                  <DedoIzquierda />
-                </p>
-                <p>
-                  <strong>2°-</strong> Despues validar tu cuenta con un link en
-                  tu correo electronico <Email />
-                </p>
-                <p>
-                  <strong>3°-</strong> Listo!, Ahora inicia sesion con tu cuenta
-                  y podras acceder a la aplicacion <CaraGafasSol />
-                </p>
+                {user ? (
+                  <p>
+                    Ya tienes tu cuenta creada ahora solo necesitar ir al sitio
+                    princiapl, puedes ir{" "}
+                    <Link to="/client">Aquí para ir al sitio principal</Link>{" "}
+                    <DedoIzquierda />
+                  </p>
+                ) : (
+                  <>
+                    <p>
+                      <strong>1°-</strong> Primero que todo necesitas tu cuenta,
+                      puedes ir{" "}
+                      <Link to="/register">Aquí para registrarte</Link>{" "}
+                      <DedoIzquierda />
+                    </p>
+                    <p>
+                      <strong>2°-</strong> Despues validar tu cuenta con un link
+                      en tu correo electronico <Email />
+                    </p>
+                    <p>
+                      <strong>3°-</strong> Listo!, Ahora inicia sesion con tu
+                      cuenta y podras acceder a la aplicacion <CaraGafasSol />
+                    </p>
+                  </>
+                )}
+
                 <p>
                   Te aparecerán las diversas funcionalidades que tenemos para ti
                   dentro de la aplicación,{" "}
@@ -216,15 +249,31 @@ const HomeWebPage = () => {
           {/*LAST SECCION */}
           <Row className="justify-content-center last-row">
             <Col xs={12} md={6} className="last-col">
-              <h2 data-aos="fade-down-right">
-                Sabiendo todo eso, te nos unes?
-              </h2>
-              <h2 data-aos="fade-up-left">
-                Solo faltas tu <CaraGafasSol />
-              </h2>
-              <button data-aos="fade-up">
-                <Link to="/register">Registrarse</Link>
-              </button>
+              {user ? (
+                <>
+                  <h2 data-aos="fade-down-right">
+                    Ahora que sabes que puedes hacer en la agenda
+                  </h2>
+                  <h2 data-aos="fade-up-left">
+                    Que esperas para ir a usarlad <CaraGafasSol />
+                  </h2>
+                  <button data-aos="fade-up">
+                    <Link to="/client">Ir a mi Agenda</Link>
+                  </button>
+                </>
+              ) : (
+                <>
+                  <h2 data-aos="fade-down-right">
+                    Sabiendo todo eso, te nos unes?
+                  </h2>
+                  <h2 data-aos="fade-up-left">
+                    Solo faltas tu <CaraGafasSol />
+                  </h2>
+                  <button data-aos="fade-up">
+                    <Link to="/register">Registrarse</Link>
+                  </button>
+                </>
+              )}
             </Col>
           </Row>
         </Col>

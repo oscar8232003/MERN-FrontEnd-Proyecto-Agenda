@@ -1,6 +1,8 @@
 import React from "react";
 import { Navbar, Nav, Col, Row } from "react-bootstrap";
+import UseAuthHook from "../../../Hooks/UseAuthHook";
 import { Link } from "react-router-dom";
+import { logout } from "../../../helpers/jwtHelper";
 
 //CSS
 import "./HeaderComponent.css";
@@ -9,6 +11,13 @@ import "./HeaderComponent.css";
 import Logo from "../../../assets/logo.png";
 
 const HeaderComponent = () => {
+  const { user } = UseAuthHook();
+
+  const desconectarse = () => {
+    logout();
+    window.location.reload();
+  };
+
   return (
     <Row className="header-component-row justify-content-center">
       <Col xs={12} sm={10} xl={9} className="header-component-col">
@@ -25,17 +34,36 @@ const HeaderComponent = () => {
               <Link className="nav-link" to="/sobre-mi">
                 Sobre Mi
               </Link>
+              {user && (
+                <Link className="nav-link" to="/client">
+                  Panel Principal
+                </Link>
+              )}
+
+              {user && user.role === "admin" && (
+                <Link className="nav-link" to="/admin">
+                  Admin
+                </Link>
+              )}
             </Nav>
             <div className="header-component-nav-botonera">
-              <button className="header-component-nav-botonera--login">
-                <Link to="/login">Sign In</Link>
-              </button>
-              <button className="header-component-nav-botonera--register">
-                <Link to="/register">Sign Up</Link>
-              </button>
-              <button className="header-component-nav-botonera--leave">
-                <Link to="/">Leave</Link>
-              </button>
+              {user ? (
+                <button
+                  className="header-component-nav-botonera--leave"
+                  onClick={() => desconectarse()}
+                >
+                  Leave
+                </button>
+              ) : (
+                <>
+                  <button className="header-component-nav-botonera--login">
+                    <Link to="/login">Sign In</Link>
+                  </button>
+                  <button className="header-component-nav-botonera--register">
+                    <Link to="/register">Sign Up</Link>
+                  </button>
+                </>
+              )}
             </div>
           </Navbar.Collapse>
         </Navbar>
