@@ -1,0 +1,189 @@
+@import "../../../css/variables.css";
+
+.HomeClient__container__row-header {
+  background: linear-gradient(180deg, #ffffff 75%, var(--gray-claro) 25%);
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/*HEADER*/
+.HomeClient__container__header {
+  padding-top: 30px;
+}
+
+.HomeClient__container__header h1 {
+  font-family: var(--font-titulo);
+  font-size: 50px;
+  color: var(--azul-medio-oscuro);
+}
+
+.HomeClient__container__header h4 {
+  font-family: var(--font-subtitulo);
+  font-size: 20px;
+  margin-bottom: 50px;
+  color: var(--gray-oscuro);
+}
+
+.HomeClient__container__header__info {
+  background: #ffffff;
+  border: transparent;
+  border-radius: 2px;
+  box-shadow: 0px 1px 10px -2px var(--gray-oscuro);
+  padding: 40px 40px;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+.HomeClient__container__header__info div {
+  border-right: 1px solid var(--gray-claro);
+  margin-right: 40px;
+  padding-right: 40px;
+  padding-left: 0 !important;
+  margin-bottom: 30px;
+}
+
+.HomeClient__container__header__info div:last-child {
+  margin-right: 0px;
+  padding-right: 0px;
+  border-right: none;
+}
+
+.HomeClient__container__header__info div p {
+  font-family: var(--font-cuerpo);
+  margin: 0;
+  font-size: 15px;
+  font-weight: bold;
+  height: 60px;
+  color: var(--gray);
+  text-align: center;
+}
+
+.HomeClient__container__header__info div h3 {
+  font-family: var(--font-subtitulo);
+  text-align: center;
+  color: var(--azul-medio-oscuro);
+  font-weight: bold;
+}
+/*FIN HEADER*/
+
+/*GRAFICO*/
+
+.HomeClient__container__row-grafico-movimientos {
+  padding: 30px;
+}
+
+.HomeClient__container__grafico-movimientos-titulo {
+  background: #ffffff;
+  padding: 30px !important;
+}
+
+.HomeClient__container__grafico-movimientos-titulo h3 {
+  font-family: var(--font-subtitulo);
+  margin: 0;
+  font-size: 30px;
+  color: var(--azul-medio-oscuro);
+}
+
+.HomeClient__container__grafico-movimientos {
+  background: #ffffff;
+  padding: 0 30px 30px 30px !important;
+}
+/*FIN GRAFICO*/
+
+/*RECORDATORIOS*/
+.HomeClient__container__recordatorios-title {
+  font-family: var(--font-subtitulo);
+  margin: 0;
+  font-size: 30px;
+  color: var(--azul-medio-oscuro);
+}
+/*FIN RECORDATORIOS*/
+
+/*FINANZAS*/
+.HomeClient__container__finanzas h3 {
+  font-family: var(--font-subtitulo);
+  margin: 0;
+  font-size: 30px;
+  color: var(--azul-medio-oscuro);
+}
+
+.HomeClient__container__finanzas h4 {
+  font-family: var(--font-subtitulo);
+  color: var(--gray-oscuro);
+  margin: 0;
+  margin-top: 5px;
+  font-size: 18px;
+}
+
+/*FIN FINANZAS*/
+
+/*LISTAS*/
+.HomeClient__container__listas h3 {
+  font-family: var(--font-subtitulo);
+  margin: 0;
+  font-size: 30px;
+  color: var(--azul-medio-oscuro);
+}
+
+.HomeClient__container__listas h4 {
+  font-family: var(--font-subtitulo);
+  color: var(--gray-oscuro);
+  margin: 0;
+  margin-top: 5px;
+  font-size: 18px;
+}
+/*FIN LISTAS*/
+
+/*Quitar estilos hover a los anchor*/
+.HomeClient__container__recordatorios a:hover,
+.HomeClient__container__finanzas a:hover,
+.HomeClient__container__listas a:hover {
+  text-decoration: none;
+}
+
+@media (max-width: 425.98px) {
+  .HomeClient__container__header__info div {
+    border-right: 1px solid #ffffff;
+    border-bottom: 1px solid var(--gray-claro);
+    margin-right: 0px;
+    padding-right: 30px;
+    padding-left: 30px !important;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+  }
+
+  .HomeClient__container__header__info div:last-child {
+    padding-right: 30px;
+    border-bottom: 0px solid var(--gray-claro);
+    padding-bottom: 0px;
+  }
+}
+
+@media (min-width: 426px) and (max-width: 575.98px) {
+  .HomeClient__container__header__info div {
+    border-right: 1px solid #ffffff;
+    margin-right: 0px;
+    padding-right: 30px;
+    padding-left: 30px !important;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+  }
+
+  .HomeClient__container__header__info div:last-child {
+    padding-right: 30px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .HomeClient__container__header__info div {
+    border-right: 1px solid #ffffff;
+    margin-right: 0px;
+    padding-right: 30px;
+    padding-left: 30px !important;
+    margin-bottom: 30px;
+  }
+
+  .HomeClient__container__header__info div:last-child {
+    padding-right: 30px;
+  }
+}

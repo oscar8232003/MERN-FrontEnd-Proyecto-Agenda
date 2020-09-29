@@ -1,0 +1,9 @@
+@import "../../../../css/variables.css";
+
+.Component__ErrorEmpty h3 {
+  text-align: center;
+  padding: 30px;
+  font-family: var(--font-cuerpo);
+  color: var(--azul);
+  font-weight: bold;
+}

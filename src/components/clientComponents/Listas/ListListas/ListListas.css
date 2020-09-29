@@ -1,0 +1,20 @@
+@import "../../../../css/variables.css";
+
+.Component__row-listas {
+  padding: 30px;
+}
+
+.Component__listas {
+  background: #ffffff;
+  padding: 30px !important;
+}
+
+.Component__listas__panel {
+  background: #ffffff;
+  padding: 15px !important;
+  width: 100%;
+}
+
+.Component__listas__panel--toast {
+  margin-bottom: 30px;
+}

@@ -68,3 +68,7 @@ export const Cambios = () => {
 export const Familia = () => {
   return <Emoji symbol="👪" label="Familia" />;
 };
+
+export const PokerFace = () => {
+  return <Emoji symbol="😑" label="PokerFace" />;
+};

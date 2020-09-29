@@ -1,0 +1,15 @@
+@import "../../../../css/variables.css";
+
+.Component__row-finanzas {
+  padding: 30px;
+}
+
+.Component__finanzas {
+  background: #ffffff;
+  padding: 30px !important;
+}
+
+.Component__finanzas__list {
+  background: #ffffff;
+  padding: 15px 30px 30px 30px !important;
+}

@@ -1,0 +1,25 @@
+@import "../../../../css/variables.css";
+
+.Component__row-recordatorios {
+  padding: 30px;
+}
+
+.Component__recordatorios-title {
+  background: #ffffff;
+  padding: 30px !important;
+}
+
+.Component__recordatorio__importantes,
+.Component__recordatorio__otros {
+  background: #ffffff;
+  padding: 0 30px 30px 30px !important;
+}
+
+.Component__recordatorio__importantes h4,
+.Component__recordatorio__otros h4 {
+  font-family: var(--font-subtitulo);
+  color: var(--celeste-oscuro);
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 22px;
+}

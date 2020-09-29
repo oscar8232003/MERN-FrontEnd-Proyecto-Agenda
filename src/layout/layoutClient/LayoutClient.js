@@ -5,6 +5,7 @@ import { Redirect, Link } from "react-router-dom";
 
 //Components
 import Spin from "../../components/Spin";
+import { logout } from "../../helpers/jwtHelper";
 
 //CSS
 import "./LayoutClient.css";
@@ -25,7 +26,17 @@ import {
 
 const LayoutClient = ({ children }) => {
   const { user, isLoading } = UseAuthHook();
-
+  /*
+  const user = {
+    userID: 1,
+    name: "Oscar",
+    lastname: "Valenzuela",
+    email: "oavr.18@gmail.com",
+    password: "oskar5524524",
+    role: "client",
+    avatar: "",
+  };
+  */
   if (!user && isLoading) {
     return <Spin />;
   }
@@ -33,10 +44,15 @@ const LayoutClient = ({ children }) => {
   if (!user && !isLoading) {
     return (
       <>
-        <Redirect to="/login" />
+        <Redirect to="/" />
       </>
     );
   }
+
+  const desconectar = () => {
+    logout();
+    window.location.reload();
+  };
 
   return (
     <Container fluid className="layoutClient__container">
@@ -126,7 +142,10 @@ const LayoutClient = ({ children }) => {
                     <Smile /> Editar Perfil
                   </Link>
                   <NavDropdown.Divider />
-                  <button className="layoutClient__client__navbar--button">
+                  <button
+                    className="layoutClient__client__navbar--button"
+                    onClick={() => desconectar()}
+                  >
                     Salir
                   </button>
                 </NavDropdown>
@@ -137,7 +156,12 @@ const LayoutClient = ({ children }) => {
                   <Smile /> Editar Perfil
                 </Link>
 
-                <button className="layoutClient__client__navbar--button">
+                <button
+                  className="layoutClient__client__navbar--button"
+                  onClick={() => {
+                    desconectar();
+                  }}
+                >
                   Salir
                 </button>
               </Nav>
