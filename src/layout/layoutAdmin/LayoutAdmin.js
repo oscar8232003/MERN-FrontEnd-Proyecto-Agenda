@@ -14,7 +14,7 @@ import Logo from "../../assets/logo.png";
 import iconoUser from "../../assets/icono-user.jpg";
 
 //Emojis
-import { Familia } from "../../components/Emojis";
+import { Familia, CaraGafasSol } from "../../components/Emojis";
 
 const LayoutAdmin = ({ children }) => {
   const { user, isLoading } = UseAuthHook();
@@ -51,6 +51,9 @@ const LayoutAdmin = ({ children }) => {
             <Link to="/admin/users" className="nav-link">
               <Familia /> Usuarios
             </Link>
+            <Link to="/admin" className="nav-link">
+              <CaraGafasSol /> Admin
+            </Link>
           </Nav>
         </Col>
         {/*FIN SIDEBAR*/}
@@ -79,8 +82,11 @@ const LayoutAdmin = ({ children }) => {
 
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="layoutAdmin__admin__navbar__nav0 d-lg-none">
-                <Link to="/client/finanzas" className="nav-link">
-                  <Familia /> Finanzas
+                <Link to="/admin/users" className="nav-link">
+                  <Familia /> Usuarios
+                </Link>
+                <Link to="/admin" className="nav-link">
+                  <CaraGafasSol /> Admin
                 </Link>
               </Nav>
 

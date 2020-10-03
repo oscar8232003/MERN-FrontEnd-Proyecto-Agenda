@@ -1,0 +1,141 @@
+@import "../../../../css/variables.css";
+
+.Component__User {
+  width: 100%;
+  display: flex;
+  height: 60px;
+  font-family: var(--font-cuerpo);
+  box-shadow: 0px 5px 20px -10px var(--gray-oscuro);
+  border-radius: 3px;
+  margin-bottom: 15px;
+}
+
+.Component__User p {
+  margin: 0;
+  color: var(--azul);
+}
+
+.Component__User__name {
+  display: flex;
+  align-items: center;
+}
+
+.Component__User__name img {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  margin-right: 15px;
+}
+
+.Component__User__name--name {
+  font-size: 18px !important;
+  font-weight: 600;
+}
+
+.Component__User__role {
+  display: flex;
+  align-items: center;
+}
+
+.Component__User__role--role {
+  margin-right: 20px !important;
+  height: 35px;
+  padding: 6px 10px;
+  border-radius: 5px;
+  color: #ffffff !important;
+}
+
+.Component__User--bg-red {
+  background: var(--rojo);
+}
+
+.Component__User--bg-blue {
+  background: var(--azul);
+}
+
+.Component__User__role--email {
+  margin-right: 20px !important;
+}
+
+/*MEDIA QUERYS*/
+/*XS*/
+@media (max-width: 575.98px) {
+  .Component__User--mobile {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-cuerpo);
+    box-shadow: 0px 5px 20px -10px var(--gray-oscuro);
+    border-radius: 3px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .Component__User--mobile p {
+    margin: 0;
+    color: var(--azul);
+  }
+
+  .Component__User__name--mobile {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+    padding-top: 20px;
+  }
+
+  .Component__User__name--mobile img {
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    margin-right: 15px;
+  }
+
+  .Component__User__name--name--mobile {
+    font-size: 18px !important;
+    font-weight: 600;
+    margin-right: 15px !important;
+  }
+
+  .Component__User__role--mobile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Component__User__role--role--mobile {
+    height: 35px;
+    padding: 6px 10px;
+    border-radius: 5px;
+    color: #ffffff !important;
+    margin-bottom: 20px !important;
+  }
+
+  .Component__User__role--email--mobile {
+    margin-bottom: 10px !important;
+  }
+}
+
+/*SM*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .Component__User__name img {
+    margin-right: 10px;
+  }
+
+  .Component__User__name--name {
+    font-size: 14px !important;
+    font-weight: 600;
+  }
+
+  .Component__User__role--role {
+    height: 30px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #ffffff !important;
+    margin-right: 10px !important;
+    font-size: 13px;
+  }
+
+  .Component__User__role--email {
+    margin-right: 10px !important;
+    font-size: 14px;
+  }
+}

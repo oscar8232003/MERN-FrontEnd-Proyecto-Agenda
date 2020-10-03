@@ -45,7 +45,7 @@ const ValidationAccountPage = (props) => {
       <Row
         className={"justify-content-center row-validation align-items-center"}
       >
-        <Col xs="10" sm="10" md="8" lg="6" xl="6" className="col-validation">
+        <Col xs="12" sm="10" md="8" lg="6" xl="6" className="col-validation">
           {url === "/send-validation" && <SendValidation />}
 
           {url === "/re-send-validation" && <ReSendValidation />}

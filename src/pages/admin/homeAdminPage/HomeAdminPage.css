@@ -1,0 +1,36 @@
+@import "../../../css/variables.css";
+
+/*LIST USERS*/
+.HomeAdmin__container__listusers {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.HomeAdmin__container__listusers--title {
+  font-family: var(--font-subtitulo);
+  margin: 0;
+  font-size: 30px;
+  color: var(--azul-medio-oscuro);
+}
+
+.HomeAdmin__container__listusers--title h3 {
+  font-family: var(--font-subtitulo);
+  margin: 0;
+  font-size: 30px;
+  color: var(--azul-medio-oscuro);
+}
+
+.HomeAdmin__container__listusers--title h4 {
+  font-family: var(--font-subtitulo);
+  color: var(--gray-oscuro);
+  margin: 0;
+  margin-top: 5px;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+/*FIN LIST USERS*/
+
+.HomeAdmin__container__listusers--title a:hover {
+  text-decoration: none;
+}

@@ -2,6 +2,8 @@
 
 .layoutAdmin__container {
   padding: 0 !important;
+  background: var(--gray-claro);
+  min-height: 100vh;
 }
 
 /*SIDEBAR*/

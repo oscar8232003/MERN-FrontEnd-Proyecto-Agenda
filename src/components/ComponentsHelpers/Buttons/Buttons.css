@@ -1,0 +1,108 @@
+@import "../../../css/variables.css";
+
+/*AddButton*/
+.Component__AddButton {
+  height: 40px;
+  padding: 0px 15px;
+  border: transparent;
+  color: #ffffff !important;
+  background: var(--verde);
+  font-family: var(--font-cuerpo);
+  border-radius: 2px;
+  font-weight: 600;
+  transition: all 0.5s;
+}
+
+.Component__AddButton:focus {
+  outline-color: var(--verde);
+}
+
+.Component__AddButton:hover {
+  transform: scale(1.1);
+}
+/*Fin AddButton*/
+
+/*AddButtonAccept*/
+.Component__AddButtonAccept {
+  width: 100%;
+  height: 45px;
+  padding: 0px 15px;
+  border: transparent;
+  color: #ffffff !important;
+  background: var(--verde);
+  font-family: var(--font-cuerpo);
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.5s;
+}
+
+.Component__AddButtonAccept:focus {
+  outline-color: var(--verde);
+}
+
+.Component__AddButtonAccept:hover {
+  transform: scale(1.02);
+}
+/*Fin AddButtonAccept*/
+
+/*EditSmallButton*/
+.Component__EditSmallButton {
+  border: transparent;
+  border-radius: 5px;
+  height: 35px;
+  width: 40px;
+  background: var(--celeste);
+  transition: all 0.5s;
+  margin-right: 10px;
+}
+
+.Component__EditSmallButton:focus {
+  outline-color: var(--celeste);
+}
+
+.Component__EditSmallButton:hover {
+  transform: scale(1.1);
+}
+/*Fin EditSmallButton*/
+
+/*EditButtonAccept*/
+.Component__EditButtonAccept {
+  width: 100%;
+  height: 45px;
+  padding: 0px 15px;
+  border: transparent;
+  color: #ffffff !important;
+  background: var(--celeste);
+  font-family: var(--font-cuerpo);
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.5s;
+}
+
+.Component__EditButtonAccept:focus {
+  outline-color: var(--celeste);
+}
+
+.Component__EditButtonAccept:hover {
+  transform: scale(1.02);
+}
+/*Fin EditButtonAccept*/
+
+/*DeleteSmallButton*/
+.Component__DeleteSmallButton {
+  border: transparent;
+  border-radius: 5px;
+  height: 35px;
+  width: 40px;
+  background: var(--Egreso);
+  transition: all 0.5s;
+}
+
+.Component__DeleteSmallButton:focus {
+  outline-color: var(--Egreso);
+}
+
+.Component__DeleteSmallButton:hover {
+  transform: scale(1.1);
+}
+/*Fin DeleteSmallButton*/

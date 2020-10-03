@@ -1,1 +1,1 @@
-export { default } from "./homeAdminPage.js";
+export { default } from "./HomeAdminPage.js";

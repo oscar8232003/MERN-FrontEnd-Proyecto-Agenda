@@ -20,8 +20,8 @@ import UserPage from "../pages/client/UserPage";
 import HelpPage from "../pages/client/HelpPage";
 
 //Admin
-import homeAdminPage from "../pages/admin/homeAdminPage";
-import usersAdminPage from "../pages/admin/usersAdminPage";
+import HomeAdminPage from "../pages/admin/HomeAdminPage";
+import UsersAdminPage from "../pages/admin/UsersAdminPage";
 
 const Routes = [
   {
@@ -46,7 +46,12 @@ const Routes = [
     routes: [
       {
         path: "/admin",
-        component: homeAdminPage,
+        component: HomeAdminPage,
+        exact: true,
+      },
+      {
+        path: "/admin/users",
+        component: UsersAdminPage,
         exact: true,
       },
       {

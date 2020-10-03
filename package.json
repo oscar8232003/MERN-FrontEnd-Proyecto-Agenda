@@ -9,6 +9,7 @@
     "a11y-react-emoji": "^1.1.2",
     "aos": "^2.3.4",
     "bootstrap": "^4.5.2",
+    "formik": "^2.1.7",
     "install": "^0.13.0",
     "jwt-decode": "^3.0.0-beta.2",
     "npm": "^6.14.8",
@@ -18,7 +19,9 @@
     "react-helmet": "^6.1.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
-    "recharts": "^1.8.5"
+    "react-toastify": "^6.0.8",
+    "recharts": "^1.8.5",
+    "sweetalert2": "^10.3.5"
   },
   "scripts": {
     "start": "react-scripts start",

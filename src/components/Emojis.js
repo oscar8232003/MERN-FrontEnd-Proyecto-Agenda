@@ -37,6 +37,10 @@ export const DineroConAlas = () => {
   return <Emoji symbol="💸" label="DineroConAlas" />;
 };
 
+export const BolsaDeDinero = () => {
+  return <Emoji symbol="💰" label="BolsaDeDinero" />;
+};
+
 export const Libros = () => {
   return <Emoji symbol="📘" label="Libros" />;
 };
@@ -61,6 +65,10 @@ export const DedoIzquierda = () => {
   return <Emoji symbol="👈" label="dedoIzquierda" />;
 };
 
+export const DedoDerecha = () => {
+  return <Emoji symbol="👉" label="DedoDerecha" />;
+};
+
 export const Cambios = () => {
   return <Emoji symbol="📝" label="Cambios" />;
 };
@@ -71,4 +79,16 @@ export const Familia = () => {
 
 export const PokerFace = () => {
   return <Emoji symbol="😑" label="PokerFace" />;
+};
+
+export const Lupa = () => {
+  return <Emoji symbol="🔎" label="Lupa" />;
+};
+
+export const Edit = () => {
+  return <Emoji symbol="📝" label="Edit" />;
+};
+
+export const Delete = () => {
+  return <Emoji symbol="💀" label="Delete" />;
 };

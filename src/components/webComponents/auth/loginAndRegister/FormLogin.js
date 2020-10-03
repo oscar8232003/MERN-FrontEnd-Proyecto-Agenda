@@ -94,7 +94,7 @@ const FormLogin = () => {
   return (
     <Container fluid className="background-login-register">
       <Row className={"justify-content-center"}>
-        <Col xs="10" sm="9" md="7" lg="5" xl="4" className="col-login-register">
+        <Col xs="12" sm="9" md="7" lg="5" xl="4" className="col-login-register">
           <div className="header-login-register">
             <img src={Logo} alt="logo" />
             <h1>
@@ -102,12 +102,7 @@ const FormLogin = () => {
             </h1>
           </div>
 
-          <form
-            action="#"
-            method="POST"
-            onSubmit={enviarFormulario}
-            className="form-login-register"
-          >
+          <form onSubmit={enviarFormulario} className="form-login-register">
             <div className="form-login-register__input-container">
               <p>Correo Electronico</p>
               <input
@@ -117,7 +112,7 @@ const FormLogin = () => {
                 id="email"
                 onChange={handleUser}
               />
-              {error.email && <p className="msg-error">{error.email}</p>}
+              {error.email && <div className="msg-error">{error.email}</div>}
             </div>
 
             <div className="form-login-register__input-container">
@@ -129,7 +124,9 @@ const FormLogin = () => {
                 id="password"
                 onChange={handleUser}
               />
-              {error.password && <p className="msg-error">{error.password}</p>}
+              {error.password && (
+                <div className="msg-error">{error.password}</div>
+              )}
             </div>
 
             <button type="submit">Ingresar</button>

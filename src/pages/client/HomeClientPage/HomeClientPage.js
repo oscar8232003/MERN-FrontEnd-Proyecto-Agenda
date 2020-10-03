@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
-import { Row, Col, Alert, Toast } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import UseAuthHook from "../../../Hooks/UseAuthHook";
 
 //CSS
@@ -15,6 +15,7 @@ import GraficoMovimientos from "../../../components/clientComponents/Graficos/Gr
 import ListRecordatorios from "../../../components/clientComponents/Recordatorios/ListRecordatorios";
 import ListFinanzas from "../../../components/clientComponents/Finanzas/ListFinanzas";
 import ListListas from "../../../components/clientComponents/Listas/ListListas";
+import HeaderComponent from "../../../components/ComponentsHelpers/HeaderComponent";
 
 const HomeClientPage = () => {
   const { user } = UseAuthHook();
@@ -93,9 +94,71 @@ const HomeClientPage = () => {
     "primary",
   ];
 
-  const dataFinanzas = ["danger", "danger", "danger", "danger", "danger"];
+  const dataFinanzas = [
+    {
+      tipo: "Ingreso",
+      nombre: "Peguita de desarrollo",
+      monto: "250000",
+      categoria: "Trabajo",
+      fecha: "29/09/2020",
+    },
+    {
+      tipo: "Egreso",
+      nombre: "Pago de cuenta de luz",
+      monto: "25000",
+      categoria: "Gastos Comunes",
+      fecha: "29/09/2020",
+    },
+    {
+      tipo: "Ingreso",
+      nombre: "Ganancia de inversion",
+      monto: "25000",
+      categoria: "Inversion",
+      fecha: "29/09/2020",
+    },
+    {
+      tipo: "Egreso",
+      nombre: "Compra de comida en Wendys",
+      monto: "10000",
+      categoria: "Comida",
+      fecha: "29/09/2020",
+    },
+    {
+      tipo: "Ingreso",
+      nombre: "Trabajo de desarrollador",
+      monto: "25000",
+      categoria: "Trabajo",
+      fecha: "29/09/2020",
+    },
+    {
+      tipo: "Egreso",
+      nombre: "Regalo para mi wachita rika",
+      monto: "30000",
+      categoria: "Regalos",
+      fecha: "29/09/2020",
+    },
+  ];
 
   const dataListas = [1, 2, 3, 4, 5, 6, 7, 8];
+
+  const dataHeader = [
+    {
+      title: "Movimientos este mes",
+      mount: "50",
+    },
+    {
+      title: "Ingresos este mes",
+      mount: "$500000",
+    },
+    {
+      title: "Egresos este mes",
+      mount: "$500000",
+    },
+    {
+      title: "Recordatorios prox. 3 dias",
+      mount: "3",
+    },
+  ];
 
   return (
     <>
@@ -104,33 +167,10 @@ const HomeClientPage = () => {
       </Helmet>
 
       {/*HEADER*/}
-      <Row className="HomeClient__container__row-header">
-        <Col xs={12} className="HomeClient__container__header">
-          <h1>Bienvenido {user.name}</h1>
-          <h4>Revisa la última información</h4>
-        </Col>
-        <Row className="HomeClient__container__header__info">
-          <Col>
-            <p>Movimientos este mes</p>
-            <h3>50</h3>
-          </Col>
-
-          <Col>
-            <p>Ingresos este mes</p>
-            <h3>$500000</h3>
-          </Col>
-
-          <Col>
-            <p>Egresos este mes</p>
-            <h3>$500000</h3>
-          </Col>
-
-          <Col>
-            <p>Recordatorios prox. 3 dias</p>
-            <h3>10</h3>
-          </Col>
-        </Row>
-      </Row>
+      <HeaderComponent data={dataHeader}>
+        <h1>Bienvenido {user.name}</h1>
+        <h4>Revisa la última información</h4>
+      </HeaderComponent>
       {/*FIN HEADER*/}
 
       {/*GRAFICO*/}

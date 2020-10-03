@@ -124,7 +124,7 @@ const FormRegister = () => {
   return (
     <Container fluid className="background-login-register">
       <Row className={"justify-content-center"}>
-        <Col xs="10" sm="9" md="7" lg="5" xl="4" className="col-login-register">
+        <Col xs="12" sm="9" md="7" lg="5" xl="4" className="col-login-register">
           <div className="header-login-register">
             <img src={Logo} alt="logo" />
             <h1>
@@ -147,7 +147,7 @@ const FormRegister = () => {
                 id="name"
                 onChange={handleUser}
               />
-              {error.name && <p className="msg-error">{error.name}</p>}
+              {error.name && <div className="msg-error">{error.name}</div>}
             </div>
 
             <div className="form-login-register__input-container">
@@ -159,7 +159,9 @@ const FormRegister = () => {
                 id="lastname"
                 onChange={handleUser}
               />
-              {error.lastname && <p className="msg-error">{error.lastname}</p>}
+              {error.lastname && (
+                <div className="msg-error">{error.lastname}</div>
+              )}
             </div>
 
             <div className="form-login-register__input-container">
@@ -171,7 +173,7 @@ const FormRegister = () => {
                 id="email"
                 onChange={handleUser}
               />
-              {error.email && <p className="msg-error">{error.email}</p>}
+              {error.email && <div className="msg-error">{error.email}</div>}
             </div>
 
             <div className="form-login-register__input-container">
@@ -183,7 +185,9 @@ const FormRegister = () => {
                 id="password"
                 onChange={handleUser}
               />
-              {error.password && <p className="msg-error">{error.password}</p>}
+              {error.password && (
+                <div className="msg-error">{error.password}</div>
+              )}
             </div>
 
             <button type="submit">Registrame!</button>

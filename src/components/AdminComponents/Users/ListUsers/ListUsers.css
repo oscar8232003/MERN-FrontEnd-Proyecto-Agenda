@@ -1,0 +1,13 @@
+.Component__row-users {
+  padding: 30px !important;
+}
+
+.Component__users {
+  background: #ffffff;
+  padding: 30px !important;
+}
+
+.Component__users__list {
+  background: #ffffff;
+  padding: 0px 30px 30px 30px !important;
+}
