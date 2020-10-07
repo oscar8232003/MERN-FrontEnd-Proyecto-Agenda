@@ -14,7 +14,7 @@ import Logo from "../../assets/logo.png";
 import iconoUser from "../../assets/icono-user.jpg";
 
 //Emojis
-import { Familia, CaraGafasSol } from "../../components/Emojis";
+import { Familia, CaraGafasSol, Smile } from "../../components/Emojis";
 
 const LayoutAdmin = ({ children }) => {
   const { user, isLoading } = UseAuthHook();
@@ -46,10 +46,15 @@ const LayoutAdmin = ({ children }) => {
         <Col lg={2} className="layoutAdmin__sideBar d-none d-lg-block">
           <Nav activeKey="/" className="flex-column layoutAdmin__sideBar__nav">
             <div className="layoutAdmin__sideBar__nav__logo">
-              <img src={Logo} alt="logo" />
+              <Link to="/">
+                <img src={Logo} alt="logo" />
+              </Link>
             </div>
             <Link to="/admin/users" className="nav-link">
               <Familia /> Usuarios
+            </Link>
+            <Link to={`/client/user/${user.userID}`} className="nav-link">
+              <Smile /> Mi Perfil
             </Link>
             <Link to="/admin" className="nav-link">
               <CaraGafasSol /> Admin
@@ -84,6 +89,9 @@ const LayoutAdmin = ({ children }) => {
               <Nav className="layoutAdmin__admin__navbar__nav0 d-lg-none">
                 <Link to="/admin/users" className="nav-link">
                   <Familia /> Usuarios
+                </Link>
+                <Link to={`/client/user/${user.userID}`} className="nav-link">
+                  <Smile /> Mi Perfil
                 </Link>
                 <Link to="/admin" className="nav-link">
                   <CaraGafasSol /> Admin

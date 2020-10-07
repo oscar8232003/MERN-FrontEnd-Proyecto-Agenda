@@ -9,10 +9,14 @@
   padding: 30px !important;
 }
 
-.Component__recordatorio__importantes,
+.Component__recordatorio__importantes {
+  background: #ffffff;
+  padding: 0 15px 30px 30px !important;
+}
+
 .Component__recordatorio__otros {
   background: #ffffff;
-  padding: 0 30px 30px 30px !important;
+  padding: 0 30px 30px 15px !important;
 }
 
 .Component__recordatorio__importantes h4,
@@ -22,4 +26,26 @@
   margin: 0;
   margin-bottom: 15px;
   font-size: 22px;
+}
+
+/*cambiar los anchos en xsyarn*/
+/*XS*/
+@media (max-width: 575.98px) {
+  .Component__row-recordatorios {
+    padding: 30px 15px 30px 15px !important;
+  }
+
+  .Component__recordatorios-title {
+    padding-left: 15px !important;
+  }
+
+  .Component__recordatorio__importantes {
+    background: #ffffff;
+    padding: 0 15px 30px 15px !important;
+  }
+
+  .Component__recordatorio__otros {
+    background: #ffffff;
+    padding: 0 15px 30px 15px !important;
+  }
 }

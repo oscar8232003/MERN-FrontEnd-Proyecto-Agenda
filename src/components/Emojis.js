@@ -92,3 +92,15 @@ export const Edit = () => {
 export const Delete = () => {
   return <Emoji symbol="💀" label="Delete" />;
 };
+
+export const Alert2 = () => {
+  return <Emoji symbol="❗❗" label="Alert2" />;
+};
+
+export const Alert1 = () => {
+  return <Emoji symbol="❗" label="Alert1" />;
+};
+
+export const Alert0 = () => {
+  return <Emoji symbol="❕" label="Alert0" />;
+};

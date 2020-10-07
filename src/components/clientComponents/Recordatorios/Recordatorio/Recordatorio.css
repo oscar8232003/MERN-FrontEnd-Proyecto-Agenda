@@ -1,0 +1,46 @@
+@import "../../../../css/variables.css";
+
+.Recordatorio__alert {
+  display: flex;
+  font-family: var(--font-cuerpo);
+  margin-bottom: 15px;
+  border-radius: 5px;
+  padding: 12px 20px;
+  box-shadow: 0px 1px 5px -3px black;
+  transition: all 0.5s;
+}
+
+.Recordatorio__alert:hover {
+  transform: scale(1.03);
+}
+
+.Recordatorio__alert__paragraph {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Recordatorio__alert__paragraph p,
+.Recordatorio__alert__date p {
+  margin: 0;
+}
+
+.Recordatorio__alert__date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Recordatorio__alert__date p {
+  padding: 8px 8px 5px 8px;
+  box-shadow: 0px 5px 10px -3px var(--gray-oscuro);
+  border-radius: 10px;
+}
+
+/*XS*/
+@media (max-width: 575.98px) {
+  .Recordatorio__alert__paragraph {
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+}

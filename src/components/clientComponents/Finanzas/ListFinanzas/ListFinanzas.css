@@ -13,3 +13,21 @@
   background: #ffffff;
   padding: 15px 30px 30px 30px !important;
 }
+
+/*MEDIA QUERYS*/
+/*XS*/
+@media (max-width: 575.98px) {
+  .Component__row-finanzas {
+    padding: 30px 15px;
+  }
+
+  .Component__finanzas {
+    background: #ffffff;
+    padding: 30px 15px !important;
+  }
+
+  .Component__finanzas__list {
+    background: #ffffff;
+    padding: 15px 15px 30px 15px !important;
+  }
+}

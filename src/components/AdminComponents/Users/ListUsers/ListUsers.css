@@ -11,3 +11,20 @@
   background: #ffffff;
   padding: 0px 30px 30px 30px !important;
 }
+
+/*MEDIA QUERYS*/
+/*XS*/
+@media (max-width: 575.98px) {
+  .Component__row-users {
+    padding: 30px 15px !important;
+  }
+
+  .Component__users {
+    padding: 30px 15px !important;
+  }
+
+  .Component__users__list {
+    background: #ffffff;
+    padding: 0px 15px 30px 15px !important;
+  }
+}

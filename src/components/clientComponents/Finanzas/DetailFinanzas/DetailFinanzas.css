@@ -85,8 +85,8 @@
     padding: 12px 0px;
     border: transparent;
     border-radius: 3px;
-    margin-bottom: 15px;
-    box-shadow: 0px 1px 10px -7px black;
+    margin-bottom: 25px;
+    box-shadow: 0px 5px 10px -7px black;
   }
 
   .Component__DetailFinanzas__xs p {

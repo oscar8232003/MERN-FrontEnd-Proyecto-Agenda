@@ -75,6 +75,15 @@
 }
 
 @media (max-width: 425.98px) {
+  .HomeClient__container__row-grafico-movimientos {
+    padding: 30px 15px;
+  }
+
+  .HomeClient__container__grafico-movimientos-titulo {
+    background: #ffffff;
+    padding: 30px 15px !important;
+  }
+
   .HomeClient__container__header__info div {
     border-right: 1px solid #ffffff;
     border-bottom: 1px solid var(--gray-claro);
@@ -93,6 +102,15 @@
 }
 
 @media (min-width: 426px) and (max-width: 575.98px) {
+  .HomeClient__container__row-grafico-movimientos {
+    padding: 30px 15px;
+  }
+
+  .HomeClient__container__grafico-movimientos-titulo {
+    background: #ffffff;
+    padding: 30px 15px !important;
+  }
+
   .HomeClient__container__header__info div {
     border-right: 1px solid #ffffff;
     margin-right: 0px;

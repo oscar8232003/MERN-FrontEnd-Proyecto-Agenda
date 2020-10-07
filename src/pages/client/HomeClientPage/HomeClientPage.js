@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { Row, Col } from "react-bootstrap";
@@ -16,9 +16,13 @@ import ListRecordatorios from "../../../components/clientComponents/Recordatorio
 import ListFinanzas from "../../../components/clientComponents/Finanzas/ListFinanzas";
 import ListListas from "../../../components/clientComponents/Listas/ListListas";
 import HeaderComponent from "../../../components/ComponentsHelpers/HeaderComponent";
+import ModalComponent from "../../../components/ComponentsHelpers/ModalComponent";
 
 const HomeClientPage = () => {
   const { user } = UseAuthHook();
+  const [modalShow, setModalShow] = useState(false);
+  const [modalTitle, setModalTitle] = useState("");
+  const [modalContent, setModalContent] = useState(null);
   /*
   const user = {
     userID: 1,
@@ -30,6 +34,12 @@ const HomeClientPage = () => {
     avatar: "",
   };
   */
+
+  const states = {
+    setModalShow,
+    setModalTitle,
+    setModalContent,
+  };
 
   const buildChart = () => {
     const bars = [
@@ -80,18 +90,58 @@ const HomeClientPage = () => {
   };
 
   const dataRecordatorioImportante = [
-    "danger",
-    "danger",
-    "danger",
-    "danger",
-    "danger",
+    {
+      title: "Mañana entrevista temprano",
+      date: "04/10/2020",
+      range: "veryImportant",
+    },
+    {
+      title: "Mañana entrevista temprano",
+      date: "04/10/2020",
+      range: "veryImportant",
+    },
+    {
+      title: "Mañana entrevista temprano",
+      date: "04/10/2020",
+      range: "veryImportant",
+    },
+    {
+      title: "Mañana entrevista temprano",
+      date: "04/10/2020",
+      range: "veryImportant",
+    },
+    {
+      title: "Mañana entrevista temprano",
+      date: "04/10/2020",
+      range: "veryImportant",
+    },
   ];
   const dataRecordatorioOtros = [
-    "warning",
-    "warning",
-    "warning",
-    "primary",
-    "primary",
+    {
+      title: "Mañana entrevista temprano",
+      date: "04/10/2020",
+      range: "important",
+    },
+    {
+      title: "Mañana entrevista temprano",
+      date: "04/10/2020",
+      range: "important",
+    },
+    {
+      title: "Mañana entrevista temprano",
+      date: "04/10/2020",
+      range: "normal",
+    },
+    {
+      title: "Mañana entrevista temprano",
+      date: "04/10/2020",
+      range: "normal",
+    },
+    {
+      title: "Mañana entrevista temprano",
+      date: "04/10/2020",
+      range: "normal",
+    },
   ];
 
   const dataFinanzas = [
@@ -139,7 +189,78 @@ const HomeClientPage = () => {
     },
   ];
 
-  const dataListas = [1, 2, 3, 4, 5, 6, 7, 8];
+  const dataListas = [
+    {
+      title: "Compra en la Farmacia",
+      category: "Farmacia",
+      mount: "0",
+      description:
+        "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.",
+      date: "29/09/2020",
+    },
+    {
+      title: "Compra en la Farmacia",
+      category: "Farmacia",
+      mount: "0",
+      description:
+        "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.",
+      date: "29/09/2020",
+      color: "#28a745",
+    },
+    {
+      title: "Compra en la Farmacia",
+      category: "Farmacia",
+      mount: "0",
+      description:
+        "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.",
+      date: "29/09/2020",
+      color: "#9a323e",
+    },
+    {
+      title: "Compra en la Farmacia",
+      category: "Farmacia",
+      mount: "0",
+      description:
+        "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.",
+      date: "29/09/2020",
+      color: "#28a745",
+    },
+    {
+      title: "Compra en la Farmacia",
+      category: "Farmacia",
+      mount: "0",
+      description:
+        "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.",
+      date: "29/09/2020",
+      color: "#9a323e",
+    },
+    {
+      title: "Compra en la Farmacia",
+      category: "Farmacia",
+      mount: "0",
+      description:
+        "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.",
+      date: "29/09/2020",
+      color: "#28a745",
+    },
+    {
+      title: "Compra en la Farmacia",
+      category: "Farmacia",
+      mount: "0",
+      description:
+        "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.",
+      date: "29/09/2020",
+      color: "#9a323e",
+    },
+    {
+      title: "Compra en la Farmacia",
+      category: "Farmacia",
+      mount: "0",
+      description:
+        "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.",
+      date: "29/09/2020",
+    },
+  ];
 
   const dataHeader = [
     {
@@ -217,7 +338,7 @@ const HomeClientPage = () => {
       {/*FIN FINANZAS*/}
 
       {/*LISTAS*/}
-      <ListListas data={dataListas}>
+      <ListListas data={dataListas} states={states}>
         <div className="HomeClient__container__listas">
           <Link to="/client/listas">
             <h3>
@@ -228,6 +349,13 @@ const HomeClientPage = () => {
         </div>
       </ListListas>
       {/*FIN LISTAS*/}
+      <ModalComponent
+        showModal={modalShow}
+        closeModal={setModalShow}
+        modalTitle={modalTitle}
+      >
+        {modalContent}
+      </ModalComponent>
     </>
   );
 };

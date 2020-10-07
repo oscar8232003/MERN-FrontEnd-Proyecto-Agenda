@@ -61,7 +61,9 @@ const LayoutClient = ({ children }) => {
         <Col lg={2} className="layoutClient__sideBar d-none d-lg-block">
           <Nav activeKey="/" className="flex-column layoutClient__sideBar__nav">
             <div className="layoutClient__sideBar__nav__logo">
-              <img src={Logo} alt="logo" />
+              <Link to="/">
+                <img src={Logo} alt="logo" />
+              </Link>
             </div>
             <Link to="/client/finanzas" className="nav-link">
               <Dinero /> Finanzas
@@ -72,8 +74,8 @@ const LayoutClient = ({ children }) => {
             <Link to="/client/listas" className="nav-link">
               <Lista /> Listas
             </Link>
-            <Link to="/client" className="nav-link">
-              <Cambios /> Cambios
+            <Link to={`/client/user/${user.userID}`} className="nav-link">
+              <Smile /> Mi Perfil
             </Link>
             {user.role === "admin" && (
               <Link to="/admin" className="nav-link">
@@ -117,9 +119,6 @@ const LayoutClient = ({ children }) => {
                 <Link to="/client/listas" className="nav-link">
                   <Lista /> Listas
                 </Link>
-                <Link to="/client" className="nav-link">
-                  <Cambios /> Cambios
-                </Link>
                 {user.role === "admin" && (
                   <Link to="/admin" className="nav-link">
                     <CaraGafasSol /> Admin
@@ -138,8 +137,11 @@ const LayoutClient = ({ children }) => {
                   title={`${user.name} ${user.lastname}`}
                   id="collasible-nav-dropdown"
                 >
-                  <Link to="/client" className="dropdown-item">
-                    <Smile /> Editar Perfil
+                  <Link
+                    to={`/client/user/${user.userID}`}
+                    className="dropdown-item"
+                  >
+                    <Smile /> Mi Perfil
                   </Link>
                   <NavDropdown.Divider />
                   <button
@@ -152,8 +154,8 @@ const LayoutClient = ({ children }) => {
               </Nav>
 
               <Nav className="ml-auto layoutClient__client__navbar__nav3 d-md-none">
-                <Link to="/client" className="nav-link">
-                  <Smile /> Editar Perfil
+                <Link to={`/client/user/${user.userID}`} className="nav-link">
+                  <Smile /> Mi Perfil
                 </Link>
 
                 <button

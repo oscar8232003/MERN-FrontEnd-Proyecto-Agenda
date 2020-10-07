@@ -19,7 +19,7 @@ const HeaderComponent = (props) => {
       className="HeaderComponent__container__row-header"
       style={{ background: rowBackground }}
     >
-      <Col xs={12} className="HeaderComponent__container__title">
+      <Col xs={12} className="HeaderComponent__container__title pl-0 pr-0">
         {children}
       </Col>
       {data && (

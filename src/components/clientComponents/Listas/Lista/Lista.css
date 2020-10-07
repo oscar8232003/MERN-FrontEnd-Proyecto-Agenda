@@ -1,0 +1,41 @@
+@import "../../../../css/variables.css";
+
+.Component__lista__col {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  font-family: var(--font-cuerpo);
+}
+
+.Component__lista__col button {
+  border: transparent;
+  background: transparent;
+}
+
+.Component__lista__col button:focus {
+  outline: none;
+}
+
+.Component__lista__toast-header .close {
+  display: none;
+}
+
+.Component__lista__toast-header {
+  background: var(--celeste-oscuro);
+}
+
+.Component__lista__toast-header--title {
+  color: var(--blanco) !important;
+}
+
+.Component__lista__toast-category {
+  color: #ffffff !important;
+}
+
+.Component__lista__toast-body {
+  text-align: start;
+}
+
+.Component__lista__toast-body h6 {
+  font-weight: bold;
+}

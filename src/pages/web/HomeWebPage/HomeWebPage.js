@@ -91,11 +91,12 @@ const HomeWebPage = () => {
 
             <Col
               className="card-col"
-              data-aos="fade-right"
-              xs={10}
+              data-aos="flip-left"
+              xs={12}
               sm={9}
               md={6}
               lg={4}
+              style={{ maxWidth: "350px" }}
             >
               <Card className="card-container">
                 <Card.Img variant="top" src={Finanzas} />
@@ -119,11 +120,12 @@ const HomeWebPage = () => {
 
             <Col
               className="card-col"
-              data-aos="fade-up"
-              xs={10}
+              data-aos="flip-down"
+              xs={12}
               sm={9}
               md={6}
               lg={4}
+              style={{ maxWidth: "350px" }}
             >
               <Card className="card-container">
                 <Card.Img variant="top" src={Recordatorios} />
@@ -148,11 +150,12 @@ const HomeWebPage = () => {
 
             <Col
               className="card-col"
-              data-aos="fade-left"
-              xs={10}
+              data-aos="flip-right"
+              xs={12}
               sm={9}
               md={6}
               lg={4}
+              style={{ maxWidth: "350px" }}
             >
               <Card className="card-container">
                 <Card.Img variant="top" src={Listas} />
@@ -185,11 +188,7 @@ const HomeWebPage = () => {
               <h2>¿Como Funciona?</h2>
             </Col>
 
-            <Col
-              xs={12}
-              className="funcionamiento-col-base"
-              data-aos="zoom-out-down"
-            >
+            <Col xs={12} className="funcionamiento-col-base" data-aos="fade-up">
               <Col
                 className="funcionamiento-col-base__img d-none d-md-flex"
                 md={6}
@@ -251,10 +250,10 @@ const HomeWebPage = () => {
             <Col xs={12} md={6} className="last-col">
               {user ? (
                 <>
-                  <h2 data-aos="fade-down-right">
+                  <h2 data-aos="flip-left">
                     Ahora que sabes que puedes hacer en la agenda
                   </h2>
-                  <h2 data-aos="fade-up-left">
+                  <h2 data-aos="flip-right">
                     Que esperas para ir a usarlad <CaraGafasSol />
                   </h2>
                   <button data-aos="fade-up">

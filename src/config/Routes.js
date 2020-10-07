@@ -35,6 +35,11 @@ const Routes = [
         exact: true,
       },
       {
+        path: "/client/user/:userID",
+        component: UserPage,
+        exact: true,
+      },
+      {
         component: ErrorPage,
       },
     ],

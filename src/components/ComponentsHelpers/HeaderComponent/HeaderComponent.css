@@ -113,3 +113,12 @@
     padding-right: 30px;
   }
 }
+
+/*MEDIA QUERYS*/
+/*XS*/
+@media (max-width: 575.98px) {
+  .HeaderComponent__container__row-header {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
