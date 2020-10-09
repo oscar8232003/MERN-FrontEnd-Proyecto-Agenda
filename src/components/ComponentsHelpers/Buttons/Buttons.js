@@ -42,7 +42,7 @@ export const AddButtonAccept = (props) => {
 };
 
 export const EditSmallButton = (props) => {
-  const { action } = props;
+  const { action, styles } = props;
 
   return (
     <button
@@ -50,6 +50,7 @@ export const EditSmallButton = (props) => {
       onClick={() => {
         action();
       }}
+      style={styles}
     >
       <Edit />
     </button>
@@ -57,7 +58,7 @@ export const EditSmallButton = (props) => {
 };
 
 export const EditButtonAccept = (props) => {
-  const { title = "Editar", action, type } = props;
+  const { title = "Editar", action, type, styles } = props;
 
   const verifyAction = action
     ? () => {
@@ -70,6 +71,7 @@ export const EditButtonAccept = (props) => {
       type={type}
       className="Component__EditButtonAccept"
       onClick={verifyAction}
+      style={styles}
     >
       {title}
     </button>

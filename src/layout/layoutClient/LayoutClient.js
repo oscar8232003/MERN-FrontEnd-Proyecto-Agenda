@@ -20,7 +20,7 @@ import {
   Recordatorio,
   Lista,
   Smile,
-  Cambios,
+  Home,
   CaraGafasSol,
 } from "../../components/Emojis";
 
@@ -65,6 +65,9 @@ const LayoutClient = ({ children }) => {
                 <img src={Logo} alt="logo" />
               </Link>
             </div>
+            <Link to="/client" className="nav-link">
+              <Home /> Inicio
+            </Link>
             <Link to="/client/finanzas" className="nav-link">
               <Dinero /> Finanzas
             </Link>
@@ -110,6 +113,9 @@ const LayoutClient = ({ children }) => {
 
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="layoutClient__client__navbar__nav0 d-lg-none">
+                <Link to="/client" className="nav-link">
+                  <Home /> Inicio
+                </Link>
                 <Link to="/client/finanzas" className="nav-link">
                   <Dinero /> Finanzas
                 </Link>

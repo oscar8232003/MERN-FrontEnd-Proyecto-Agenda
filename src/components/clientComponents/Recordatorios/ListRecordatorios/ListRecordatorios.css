@@ -49,3 +49,16 @@
     padding: 0 15px 30px 15px !important;
   }
 }
+
+/*SM*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .Component__recordatorio__importantes {
+    background: #ffffff;
+    padding: 0 30px 30px 30px !important;
+  }
+
+  .Component__recordatorio__otros {
+    background: #ffffff;
+    padding: 0 30px 30px 30px !important;
+  }
+}

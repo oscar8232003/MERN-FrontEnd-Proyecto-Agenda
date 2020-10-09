@@ -1,0 +1,6 @@
+@import "../../../css/variables.css";
+
+.RecordatoriosPage--Title {
+  font-family: var(--font-subtitulo);
+  color: var(--azul);
+}

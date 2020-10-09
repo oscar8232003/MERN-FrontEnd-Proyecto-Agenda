@@ -40,6 +40,11 @@ const Routes = [
         exact: true,
       },
       {
+        path: "/client/recordatorios",
+        component: RecordatoriosPage,
+        exact: true,
+      },
+      {
         component: ErrorPage,
       },
     ],

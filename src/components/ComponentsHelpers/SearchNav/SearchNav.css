@@ -1,0 +1,70 @@
+@import "../../../css/variables.css";
+
+/*Buscador*/
+.Buscador__row {
+  padding: 0px 30px 0px 30px !important;
+}
+
+.Buscador__col {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: #ffffff;
+  padding: 20px 15px !important;
+  box-shadow: 0px 5px 3px -3px var(--gray-oscuro);
+}
+
+.Buscador__col__search form {
+  display: flex;
+  font-family: var(--font-cuerpo);
+}
+
+.Buscador__col__search form input[type="text"] {
+  margin-right: 15px;
+}
+
+.Buscador__col__search form button {
+  border: transparent;
+  border-radius: 0.25rem;
+  width: 100px;
+  background: var(--celeste);
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.Buscador__col__search form button:focus {
+  outline-color: var(--celeste);
+}
+
+.Buscador__col__buttonAdd {
+  text-align: right;
+}
+
+/*MEDIA QUERYS*/
+/*XS*/
+@media (max-width: 575.98px) {
+  .Buscador__row {
+    padding: 0px 15px 0px 15px !important;
+  }
+
+  .Buscador__col {
+    padding: 20px 0px !important;
+  }
+
+  .Buscador__col__buttonAdd {
+    margin-top: 20px;
+    text-align: center;
+  }
+}
+
+/*SM*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .Buscador__col__buttonAdd {
+    margin-top: 20px;
+    text-align: center;
+  }
+}
+
+/*FIN BUSCADOR*/

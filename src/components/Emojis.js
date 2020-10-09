@@ -104,3 +104,11 @@ export const Alert1 = () => {
 export const Alert0 = () => {
   return <Emoji symbol="❕" label="Alert0" />;
 };
+
+export const Fantasma = () => {
+  return <Emoji symbol="👻" label="Fantasma" />;
+};
+
+export const Home = () => {
+  return <Emoji symbol="🏠" label="Home" />;
+};

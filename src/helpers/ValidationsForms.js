@@ -1,3 +1,5 @@
+import { transformDate, transformDateForm } from "./FormatDates";
+
 export const validateFormAdd = (values) => {
   const errors = {};
 
@@ -107,6 +109,33 @@ export const validateFormEditUser = (values) => {
     } else if (values.password.length < 8) {
       errors.password = "La contraseña no puede tener menos de 8 caracteres";
     }
+  }
+
+  return errors;
+};
+
+export const validateFormAddRecordatorio = (values) => {
+  const errors = {};
+
+  const hoy = transformDate(new Date());
+
+  if (!values.title) {
+    errors.title = "El campo no puede estar vacio";
+  }
+
+  if (
+    values.range === "normal" ||
+    values.range === "important" ||
+    values.range === "veryImportant"
+  ) {
+  } else {
+    errors.range = "Escoga un valor de la lista";
+  }
+
+  if (!values.date) {
+    errors.date = "El campo no puede estar vacio";
+  } else if (transformDateForm(values.date) < hoy) {
+    errors.date = "La fecha debe ser mayor a la de hoy";
   }
 
   return errors;
