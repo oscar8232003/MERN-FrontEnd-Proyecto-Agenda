@@ -16,7 +16,7 @@ import "./HomeWebPage.css";
 import ImgPortada from "../../../assets/webHome.svg";
 import Finanzas from "../../../assets/Cards/finanzas.jpg";
 import Recordatorios from "../../../assets/Cards/recordatorios.jpg";
-import Listas from "../../../assets/Cards/listas.jpg";
+import OcioImage from "../../../assets/Cards/ocio.jpg";
 import comoFunciona from "../../../assets/comoFunciona/comoFunciona.svg";
 
 //EMOJIS
@@ -25,7 +25,7 @@ import {
   Libros,
   Dinero,
   Recordatorio,
-  Lista,
+  Ocio,
   Guiño,
   Email,
   DedoIzquierda,
@@ -158,23 +158,20 @@ const HomeWebPage = () => {
               style={{ maxWidth: "350px" }}
             >
               <Card className="card-container">
-                <Card.Img variant="top" src={Listas} />
+                <Card.Img variant="top" src={OcioImage} />
                 <Card.Body className="card-body card-listas">
                   <Card.Title>
                     <h3 className="card-title">
-                      Listas <Lista />
+                      Entretenimiento <Ocio />
                     </h3>
                   </Card.Title>
                   <Card.Text>
                     <p className="card-text">
-                      No te ha pasado que cuando vas al super, farmacia o al
-                      negocio de la esquina, al llegar{" "}
-                      <strong>
-                        se te olvidan algunas cosas que ibas a comprar?
-                      </strong>{" "}
-                      Es normal, nos ha pasado a todos, es por eso que creamos
-                      una lista didáctica donde podrás verla desde tu Smartphone
-                      o imprimirla si es que quieres
+                      Todo tenemos un rato libre en donde nos ponemos a jugar,
+                      leer o ver alguna serie, pero en nuestro caso lo mejor que
+                      podemos hacer es saber que series estamos viendo y en que
+                      capitulo quedamos de ver, podras organizar tu ocio sin
+                      problemas
                     </p>
                   </Card.Text>
                 </Card.Body>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { Row, Col } from "react-bootstrap";
@@ -8,39 +8,112 @@ import UseAuthHook from "../../../Hooks/UseAuthHook";
 import "./HomeClientPage.css";
 
 //Emojis
-import { Recordatorio, Dinero, Lista } from "../../../components/Emojis";
+import { Recordatorio, Dinero } from "../../../components/Emojis";
 
 //Components
-import GraficoMovimientos from "../../../components/clientComponents/Graficos/GraficoMovimientos";
+//import GraficoMovimientos from "../../../components/clientComponents/Graficos/GraficoMovimientos";
 import ListRecordatorios from "../../../components/clientComponents/Recordatorios/ListRecordatorios";
 import ListFinanzas from "../../../components/clientComponents/Finanzas/ListFinanzas";
-import ListListas from "../../../components/clientComponents/Listas/ListListas";
+//import ListListas from "../../../components/clientComponents/Listas/ListListas";
 import HeaderComponent from "../../../components/ComponentsHelpers/HeaderComponent";
-import ModalComponent from "../../../components/ComponentsHelpers/ModalComponent";
+
+//Helpers
+import { transformDate } from "../../../helpers/FormatDates";
 
 const HomeClientPage = () => {
   const { user } = UseAuthHook();
-  const [modalShow, setModalShow] = useState(false);
-  const [modalTitle, setModalTitle] = useState("");
-  const [modalContent, setModalContent] = useState(null);
+  const [recordatorios, setRecordatorio] = useState({});
+  const [dataHeader, setDataHeader] = useState(null);
+
+  //TEST
+  const hoy = transformDate(new Date());
+
+  useEffect(() => {
+    const dataRecordatorioImportante = [
+      {
+        title: "Mañana entrevista temprano",
+        date: hoy,
+        range: "veryImportant",
+      },
+      {
+        title: "Mañana entrevista temprano",
+        date: hoy,
+        range: "veryImportant",
+      },
+      {
+        title: "Mañana entrevista temprano",
+        date: hoy,
+        range: "veryImportant",
+      },
+      {
+        title: "Mañana entrevista temprano",
+        date: hoy,
+        range: "veryImportant",
+      },
+      {
+        title: "Mañana entrevista temprano",
+        date: hoy,
+        range: "veryImportant",
+      },
+    ];
+    const dataRecordatorioOtros = [
+      {
+        title: "Mañana entrevista temprano",
+        date: hoy,
+        range: "important",
+      },
+      {
+        title: "Mañana entrevista temprano",
+        date: hoy,
+        range: "important",
+      },
+      {
+        title: "Mañana entrevista temprano",
+        date: hoy,
+        range: "normal",
+      },
+      {
+        title: "Mañana entrevista temprano",
+        date: hoy,
+        range: "normal",
+      },
+      {
+        title: "Mañana entrevista temprano",
+        date: hoy,
+        range: "normal",
+      },
+    ];
+
+    const dataRecordatorio = {
+      dataImportante: dataRecordatorioImportante,
+      dataOtros: dataRecordatorioOtros,
+    };
+
+    setRecordatorio(dataRecordatorio);
+
+    const dataHeaderInfo = [
+      {
+        title: "Movimientos este mes",
+        mount: "50",
+      },
+      {
+        title: "Ingresos este mes",
+        mount: "$500000",
+      },
+      {
+        title: "Egresos este mes",
+        mount: "$500000",
+      },
+      {
+        title: "Recordatorios prox. 3 dias",
+        mount: "3",
+      },
+    ];
+
+    setDataHeader(dataHeaderInfo);
+  }, []);
+
   /*
-  const user = {
-    userID: 1,
-    name: "Oscar",
-    lastname: "Valenzuela",
-    email: "oavr.18@gmail.com",
-    password: "oskar5524524",
-    role: "client",
-    avatar: "",
-  };
-  */
-
-  const states = {
-    setModalShow,
-    setModalTitle,
-    setModalContent,
-  };
-
   const buildChart = () => {
     const bars = [
       {
@@ -88,61 +161,7 @@ const HomeClientPage = () => {
 
     return { bars, data };
   };
-
-  const dataRecordatorioImportante = [
-    {
-      title: "Mañana entrevista temprano",
-      date: "04/10/2020",
-      range: "veryImportant",
-    },
-    {
-      title: "Mañana entrevista temprano",
-      date: "04/10/2020",
-      range: "veryImportant",
-    },
-    {
-      title: "Mañana entrevista temprano",
-      date: "04/10/2020",
-      range: "veryImportant",
-    },
-    {
-      title: "Mañana entrevista temprano",
-      date: "04/10/2020",
-      range: "veryImportant",
-    },
-    {
-      title: "Mañana entrevista temprano",
-      date: "04/10/2020",
-      range: "veryImportant",
-    },
-  ];
-  const dataRecordatorioOtros = [
-    {
-      title: "Mañana entrevista temprano",
-      date: "04/10/2020",
-      range: "important",
-    },
-    {
-      title: "Mañana entrevista temprano",
-      date: "04/10/2020",
-      range: "important",
-    },
-    {
-      title: "Mañana entrevista temprano",
-      date: "04/10/2020",
-      range: "normal",
-    },
-    {
-      title: "Mañana entrevista temprano",
-      date: "04/10/2020",
-      range: "normal",
-    },
-    {
-      title: "Mañana entrevista temprano",
-      date: "04/10/2020",
-      range: "normal",
-    },
-  ];
+  */
 
   const dataFinanzas = [
     {
@@ -189,6 +208,7 @@ const HomeClientPage = () => {
     },
   ];
 
+  /*
   const dataListas = [
     {
       title: "Compra en la Farmacia",
@@ -261,25 +281,7 @@ const HomeClientPage = () => {
       date: "29/09/2020",
     },
   ];
-
-  const dataHeader = [
-    {
-      title: "Movimientos este mes",
-      mount: "50",
-    },
-    {
-      title: "Ingresos este mes",
-      mount: "$500000",
-    },
-    {
-      title: "Egresos este mes",
-      mount: "$500000",
-    },
-    {
-      title: "Recordatorios prox. 3 dias",
-      mount: "3",
-    },
-  ];
+  */
 
   return (
     <>
@@ -294,7 +296,7 @@ const HomeClientPage = () => {
       </HeaderComponent>
       {/*FIN HEADER*/}
 
-      {/*GRAFICO*/}
+      {/*GRAFICO
       <Row className="HomeClient__container__row-grafico-movimientos">
         <Col
           xs={12}
@@ -306,12 +308,12 @@ const HomeClientPage = () => {
           <GraficoMovimientos {...buildChart()} />
         </Col>
       </Row>
-      {/*FIN GRAFICO*/}
+      FIN GRAFICO*/}
 
       {/*RECORDATORIOS*/}
       <ListRecordatorios
-        dataImportante={dataRecordatorioImportante}
-        dataOtros={dataRecordatorioOtros}
+        dataImportante={recordatorios.dataImportante}
+        dataOtros={recordatorios.dataOtros}
       >
         <Link
           to="/client/recordatorios"
@@ -337,25 +339,18 @@ const HomeClientPage = () => {
       </ListFinanzas>
       {/*FIN FINANZAS*/}
 
-      {/*LISTAS*/}
+      {/*LISTAS
       <ListListas data={dataListas} states={states}>
         <div className="HomeClient__container__listas">
           <Link to="/client/listas">
             <h3>
-              Listas <Lista />
+              Listas
             </h3>
           </Link>
           <h4>Mis ultimas listas activas</h4>
         </div>
       </ListListas>
-      {/*FIN LISTAS*/}
-      <ModalComponent
-        showModal={modalShow}
-        closeModal={setModalShow}
-        modalTitle={modalTitle}
-      >
-        {modalContent}
-      </ModalComponent>
+      FIN LISTAS*/}
     </>
   );
 };

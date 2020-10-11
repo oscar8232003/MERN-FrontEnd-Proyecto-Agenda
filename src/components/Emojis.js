@@ -112,3 +112,19 @@ export const Fantasma = () => {
 export const Home = () => {
   return <Emoji symbol="🏠" label="Home" />;
 };
+
+export const Ocio = () => {
+  return <Emoji symbol="👾" label="Ocio" />;
+};
+
+export const Manga = () => {
+  return <Emoji symbol="😺" label="Manga" />;
+};
+
+export const Anime = () => {
+  return <Emoji symbol="🤖" label="Anime" />;
+};
+
+export const Calendario = () => {
+  return <Emoji symbol="📆" label="Calendario" />;
+};

@@ -14,10 +14,9 @@ import ErrorPage from "../pages/web/ErrorPage";
 //Client
 import HomeClientPage from "../pages/client/HomeClientPage";
 import FinanzasPage from "../pages/client/FinanzasPage";
-import ListasPage from "../pages/client/ListasPage";
 import RecordatoriosPage from "../pages/client/RecordatoriosPage";
 import UserPage from "../pages/client/UserPage";
-import HelpPage from "../pages/client/HelpPage";
+import OcioPage from "../pages/client/OcioPage";
 
 //Admin
 import HomeAdminPage from "../pages/admin/HomeAdminPage";
@@ -42,6 +41,11 @@ const Routes = [
       {
         path: "/client/recordatorios",
         component: RecordatoriosPage,
+        exact: true,
+      },
+      {
+        path: "/client/ocio",
+        component: OcioPage,
         exact: true,
       },
       {

@@ -18,10 +18,13 @@ import iconoUser from "../../assets/icono-user.jpg";
 import {
   Dinero,
   Recordatorio,
-  Lista,
   Smile,
   Home,
+  Ocio,
   CaraGafasSol,
+  Anime,
+  Manga,
+  Calendario,
 } from "../../components/Emojis";
 
 const LayoutClient = ({ children }) => {
@@ -68,14 +71,25 @@ const LayoutClient = ({ children }) => {
             <Link to="/client" className="nav-link">
               <Home /> Inicio
             </Link>
+            <Link to="/client/ocio" className="nav-link Padre">
+              <Ocio /> Ocio
+            </Link>
+            <Link to="/client/ocio" className="nav-link Hijo">
+              <Anime /> Series/Anime
+            </Link>
+            <Link to="/client/ocio" className="nav-link Hijo">
+              <Manga /> Manga/Comics
+            </Link>
+            <Link to="/client/ocio" className="nav-link Hijo Ultimo-Hijo">
+              <Calendario /> Calendario
+            </Link>
+            {/*}
             <Link to="/client/finanzas" className="nav-link">
               <Dinero /> Finanzas
             </Link>
+            {*/}
             <Link to="/client/recordatorios" className="nav-link">
               <Recordatorio /> Recordatorios
-            </Link>
-            <Link to="/client/listas" className="nav-link">
-              <Lista /> Listas
             </Link>
             <Link to={`/client/user/${user.userID}`} className="nav-link">
               <Smile /> Mi Perfil
@@ -111,19 +125,41 @@ const LayoutClient = ({ children }) => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             {/*NO TOCAR*/}
 
+            {/*NAVBAR*/}
             <Navbar.Collapse id="responsive-navbar-nav">
+              {/*MENU */}
               <Nav className="layoutClient__client__navbar__nav0 d-lg-none">
                 <Link to="/client" className="nav-link">
                   <Home /> Inicio
                 </Link>
+
+                <NavDropdown
+                  title="Entretenimiento"
+                  id="basic-nav-dropdown"
+                  className="nav-link d-none d-md-block"
+                  style={{ paddingTop: "5px" }}
+                >
+                  <Link to="/client/ocio" className="nav-link">
+                    <Ocio /> Ocio
+                  </Link>
+                  <Link to="/client/ocio" className="nav-link">
+                    <Anime /> Series/Anime
+                  </Link>
+                  <Link to="/client/ocio" className="nav-link">
+                    <Manga /> Manga/Comics
+                  </Link>
+                  <Link to="/client/ocio" className="nav-link">
+                    <Calendario /> Calendario
+                  </Link>
+                </NavDropdown>
+
+                {/*}
                 <Link to="/client/finanzas" className="nav-link">
                   <Dinero /> Finanzas
                 </Link>
+                {*/}
                 <Link to="/client/recordatorios" className="nav-link">
                   <Recordatorio /> Recordatorios
-                </Link>
-                <Link to="/client/listas" className="nav-link">
-                  <Lista /> Listas
                 </Link>
                 {user.role === "admin" && (
                   <Link to="/admin" className="nav-link">
@@ -131,7 +167,9 @@ const LayoutClient = ({ children }) => {
                   </Link>
                 )}
               </Nav>
+              {/*FIN MENU*/}
 
+              {/*USER RIGHT PROFILE BIG*/}
               <Nav className="ml-auto layoutClient__client__navbar__nav1 d-none d-md-flex">
                 {user.avatar ? (
                   <img src={iconoUser} alt="icono-user" />
@@ -158,8 +196,23 @@ const LayoutClient = ({ children }) => {
                   </button>
                 </NavDropdown>
               </Nav>
+              {/*FIN USER RIGHT PROFILE BIG*/}
 
+              {/*USER RIGHT PROFILE SMALL*/}
               <Nav className="ml-auto layoutClient__client__navbar__nav3 d-md-none">
+                <Link to="/client/ocio" className="nav-link">
+                  <Ocio /> Ocio
+                </Link>
+                <Link to="/client/ocio" className="nav-link">
+                  <Anime /> Series/Anime
+                </Link>
+                <Link to="/client/ocio" className="nav-link">
+                  <Manga /> Manga y Comics
+                </Link>
+                <Link to="/client/ocio" className="nav-link">
+                  <Calendario /> Calendario
+                </Link>
+
                 <Link to={`/client/user/${user.userID}`} className="nav-link">
                   <Smile /> Mi Perfil
                 </Link>
@@ -173,6 +226,7 @@ const LayoutClient = ({ children }) => {
                   Salir
                 </button>
               </Nav>
+              {/*FIN USER RIGHT PROFILE SMALL*/}
             </Navbar.Collapse>
           </Navbar>
           {/*FIN NAVBAR*/}
